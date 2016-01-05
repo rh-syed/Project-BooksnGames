@@ -1,9 +1,19 @@
+/*************************************************************
+
+						GENERAL STYLES
+
+**************************************************************/
 *{
 	margin: 0px;
 	padding: 0px;
 	list-style-type: none;
 }
 
+/*************************************************************
+
+						BODY
+
+**************************************************************/
 body{
 	text-align: center;
 	font-family: Arial;
@@ -19,6 +29,11 @@ img {
 	border: none;
 }
 
+/*************************************************************
+
+						HEADERS
+
+**************************************************************/
 h2{/**Main header **/
 	font-family: Arial;
 	font-size: 14px;
@@ -53,4 +68,47 @@ h6{/**Address for Shipping**/
 	font-size: 14px;
 	font-weight: normal;
 	color: #606060;
+}
+/*************************************************************
+
+						TABLES
+
+**************************************************************/
+table{
+	width: 100%
+	text-align: center;
+}
+
+th{ /**table header **/
+	color: #888888;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+td{
+	padding: 3px 10px;
+}
+/*************************************************************
+
+						LINKS
+
+**************************************************************/
+a:link{
+	color: #006699;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #006699;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #CC6600;
+	text-decoration: underline;
+}
+
+a:active{
+	color: #CC6600;
+	text-decoration: underline;
 }
