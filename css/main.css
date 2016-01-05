@@ -18,3 +18,39 @@ header, nav, section, aside, footer {
 img {
 	border: none;
 }
+
+h2{/**Main header **/
+	font-family: Arial;
+	font-size: 14px;
+	color: #404040;
+}
+
+h3{/**Form Titles **/
+	margin-bottom: 15px;
+	font-family: Arial;
+	font-size: 22px;
+	color:white;
+	text-shadow: 1px 1px 3px #080808;
+}
+
+h4{
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	color: #606060;
+}
+
+h5{/**Prompt for Shipping**/
+	text-align: center;
+	font-family: Arial;
+	font-size: 14px;
+	color: #404040;
+}
+
+h6{/**Address for Shipping**/
+	text-align: center;
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	color: #606060;
+}
