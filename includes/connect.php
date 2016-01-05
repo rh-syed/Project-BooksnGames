@@ -2,7 +2,7 @@
 $connect = mysql_connect('localhost','booksnga_mesuser','Keep6own!');
 
 if (!$connect){
-	die('Connection was not successful'.mysql_error() );
+	die('Connection was not successful to the database user'.mysql_error() );
 }
 
 $db_selected = mysql_select_db("booksnga_mes");
