@@ -112,3 +112,29 @@ a:active{
 	color: #CC6600;
 	text-decoration: underline;
 }
+
+/*************************************************************
+
+						Classes
+
+**************************************************************/
+
+.dates{
+	color: #CC6600;
+	font-weight: bold;
+}
+
+.offers{
+	color: #404040;
+	font-weight: bold;
+}
+
+.usernames{
+	color: #006699;
+	font-weight: 900;
+}
+
+.subtitles{
+	color: #707070;
+}
+
