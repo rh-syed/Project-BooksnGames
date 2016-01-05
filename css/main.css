@@ -137,4 +137,33 @@ a:active{
 .subtitles{
 	color: #707070;
 }
+/*************************************************************
 
+						ID's
+
+**************************************************************/
+
+#wrapper{/**container for the whole website **/
+	width: 1000px;
+	margin: 15px auto 0px;
+	text-align: left;
+}
+
+#main_header{/**Logo **/
+	
+}
+
+#rightAlign{/**For the links at the top **/
+	float:right;
+	text-align: right;
+}
+
+#top_search{/**for the search bar **/
+	margin-top: 10px;
+	padding: 5px 0px 5px 10px;
+	display: block;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background-color: #006699;
+}
