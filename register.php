@@ -12,6 +12,8 @@ include ("includes/connect.php");
 <head>
 	<title> Register </title>
 	<link rel = "stylesheet" href = "css/main.css">
+	<link rel = "stylesheet" href = "css/forms.css">
+	<link rel = "stylesheet" href = "css/register.css">
 </head>
 
 <body>
