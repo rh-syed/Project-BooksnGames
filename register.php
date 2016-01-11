@@ -3,6 +3,34 @@
 session_start();
 include ("includes/connect.php");
 include ("includes/html_codes.php");
+
+if (isset($_POST['submit'])){
+	$error = array();
+	
+	//username
+	if(empty($_POST['username'])){
+		$error[] = 'Please enter a username. ';
+	}else if( ctype_alnum($_POST['username']) ){
+		$username = $_POST['username'];
+	}else{
+		$error[] = 'Username must consist of letters and numbers only. ';
+	}
+	//email
+	if(empty($_POST['email'])){
+		$error[] = 'Please enter your email. ';
+	}else if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
+		$email = mysqli_real_escape_string($mysql_connect, $_POST['email']);
+	}else{
+		$error[] = 'Your e-mail address is invalid. ';
+	}
+	//password
+	if(empty($_POST['password'])){
+		$error[] = 'Please enter a password. ';
+	}else{
+		$password = mysqli_real_escape_string($mysql_connect, $_POST['password']);
+	}
+	
+}
 ?>
 
 <!DOCTYPE html>
