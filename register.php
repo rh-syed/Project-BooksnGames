@@ -30,6 +30,15 @@ if (isset($_POST['submit'])){
 		$password = mysqli_real_escape_string($mysql_connect, $_POST['password']);
 	}
 	
+	if (empty($error)){
+		//this is good info
+	}else{
+		$error_message = '<span class="error">';
+		foreach ($error as $key => $values){
+			$error_message = "$values";
+		}
+		$error_message = "</span><br/>";
+	}
 }
 ?>
 
