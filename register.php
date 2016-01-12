@@ -32,12 +32,38 @@ if (isset($_POST['submit'])){
 	
 	if (empty($error)){
 		//this is good info
+		$result = mysql_query("SELECT * FROM users WHERE email ='$email' OR username='$username'") or die(mysql_error());
+		
+		if(mysql_num_rows($result) == 0){
+			//that's good. Username and email is available.
+			$activation = md5(uniqid(rand(),true));
+			
+			//since info is good, store it in temporary table.
+			$insertDataTemp = mysql_query("INSERT INTO tempusers(user_id,username,email,password,activation)
+				VALUES('','$username','$email','$password','$activation')") or die(mysql_error());
+				
+			if (!$insertDataTemp){
+				die ('Could not insert into database: '.mysql_error());
+			}else{
+				//info inserted succesfully in temp database
+				$message = "To activate your account, please click on this link: \n\n";
+				//link to activate.php page, this page grabs email from url and unique random code with email is matched. Looks for the match in temp database,
+				//if the combo is found then email is real and activated.
+				$message = "http://booksngames.ca".'/activate.php?email='.urlencode($email)."&key=$activation";
+				
+				mail($email,'Registration Confirmation', $message);
+				header('Location:prompt.php?x=1'); //prompt page to finalize registration
+			}
+		}else{
+			//Username and email already available.
+			header('Location:prompt.php?x=2');
+		}
 	}else{
 		$error_message = '<span class="error">';
 		foreach ($error as $key => $values){
 			$error_message = "$values";
 		}
-		$error_message = "</span><br/>";
+		$error_message = "</span><br/><br/>";
 	}
 }
 ?>
