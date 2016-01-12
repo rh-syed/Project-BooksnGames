@@ -38,9 +38,9 @@ function headerAndSeachCode(){
 function topRightLinks(){
 	//If user is logged out
 	if(!isset($_SESSION['user_id'])){
-		echo '<a href="register.php"> Register </a> | <a href="login.php"> Log In </a> '
+		echo '<a href="register.php"> Register </a> | <a href="login.php"> Log In </a>' ;
 	}
-	else{//If user is logged in
+	else{//if user is logged in
 		$user = $_SESSION['user_id'];
 		$result = mysql_query("SELECT * FROM messages WHERE receiver = $user AND status = 'unread'" or die(mysql_error) );
 		
@@ -77,7 +77,7 @@ function createCategoryList(){
 		}
 		else{
 			echo " <option value = \"$i\" ";
-			if($i==$x)(echo 'SELECTED';)
+			if($i==$x){echo 'SELECTED';}
 			echo " > ";
 			echo numberToCategory($i);
 			echo "</option>";
@@ -118,5 +118,20 @@ function numberToCategory($n){
 		default:
 			$cat = "Category Does Not Exist";
 	}
+}
+
+//Code for footer
+function footerCode(){
+	echo '
+		<footer id="main_footer">
+			<table>
+				<tr>
+					<td><a href="https://www.youtube.com/channel/UCK7MGRRcyoK_aUKOLknZNCw">YouTube</a></td>
+					<td><a href="https://www.facebook.com/rsm12">Ifah Facebook</a></td>
+					<td><a href="https://www.twitter.com/6ixFlix">Twitter+</a></td>
+				</tr>
+			</table>
+		</footer>
+	';
 }
 ?>

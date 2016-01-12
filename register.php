@@ -4,22 +4,22 @@ session_start();
 include ("includes/connect.php");
 include ("includes/html_codes.php");
 
-if (isset($_POST['submit'])){
-	$error = array();
+if (isset($_POST['submit'])){//If user hits submit
+	$error = array(); //an array to store error messages
 	
 	//username
-	if(empty($_POST['username'])){
+	if(empty($_POST['username'])){//If username field is empty
 		$error[] = 'Please enter a username. ';
-	}else if( ctype_alnum($_POST['username']) ){
-		$username = $_POST['username'];
+	}else if( ctype_alnum($_POST['username']) ){//if user name is of correct format, letters and numbers only
+		$username = $_POST['username']; //set username to username variable
 	}else{
-		$error[] = 'Username must consist of letters and numbers only. ';
+		$error[] = 'Username must consist of letters and numbers only. '; //single quotes are as is
 	}
 	//email
 	if(empty($_POST['email'])){
 		$error[] = 'Please enter your email. ';
-	}else if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){
-		$email = mysqli_real_escape_string($mysql_connect, $_POST['email']);
+	}else if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ){//checks if email is of the right format
+		$email = mysqli_real_escape_string($_POST['email']); //converts the string so it is database safe
 	}else{
 		$error[] = 'Your e-mail address is invalid. ';
 	}
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])){
 	if(empty($_POST['password'])){
 		$error[] = 'Please enter a password. ';
 	}else{
-		$password = mysqli_real_escape_string($mysql_connect, $_POST['password']);
+		$password = mysqli_real_escape_string( $_POST['password']);
 	}
 	
 	if (empty($error)){
