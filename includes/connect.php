@@ -1,13 +1,24 @@
 <?php
-$connect = mysql_connect('localhost','booksnga_mesuser','Keep6own!');
-
-if (!$connect){
-	die('Connection was not successful to the database user'.mysql_error() );
-}
-
-$db_selected = mysql_select_db("booksnga_mes");
-
-if (!$db_selected){
-	die('Connection was not successful to the database'.mysql_error() );
-}
+//$connect = mysqli'localhost', "root" , "0000"); //change this before deployment
+$extensionFile = 'php_mysqli.dll'; // why do i have to load this manually????????
+			//database setup 
+		if(extension_loaded('mysql')){
+			//printf("Mysql is avalaible <br/>");
+		}
+		else{
+			if(strtoupper(substr(PHP_OS , 0 , 3)) === "WIN" ){
+				dl('php_mysql.dll');
+			}
+			else{
+				echo "error loading sql library in windows";
+			}
+		}
+		$connect = new mysqli("localhost" , "root" , "0000" , "booksandgames");
+		if($connect->connect_errno){
+			echo "Failed to connect to mysql";
+			echo $db->connect_errno . "<br/>";
+			echo $db->connect_err . "<br/>";
+			die('Connection was not successful to the database user'.mysql_error() );
+		}
+	
 ?>

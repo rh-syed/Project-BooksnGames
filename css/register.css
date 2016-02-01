@@ -1,14 +1,17 @@
 #left_side{
-	width: 490px;
 	margin-top: 10px;
-	margin-right: 10px;
 	float: left;
+	width: 500px;;
 }
 
 #right_side{
-	margin-top: 10px;
-	float: left;
-	width: 500px;
+	width: 80%;
+	height: 5%;
+	margin-top: 5%;
+	margin-bottom: 20%
+	margin-right: 30%;
+	margin-left: 30%;
+	text-align: center;
 }
 
 .container{
