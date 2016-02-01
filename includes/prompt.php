@@ -6,7 +6,7 @@ include ("includes/html_codes.php");
 $x = $_GET['x'];
 
 function createMessage ($x){
-	if (is_numeric($x)){
+	if (is_numeric($x)){//security check
 		switch ($x){
 			case 0:
 				$message = "Your account is now active. You may now <a href=\"login.php\">Log In!</a>";

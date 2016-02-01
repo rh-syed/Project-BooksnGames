@@ -1,0 +1,8 @@
+[01-Feb-2016 13:38:24 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home2/booksnga/public_html/register.php on line 7
+[01-Feb-2016 13:40:18 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home2/booksnga/public_html/register.php on line 7
+[01-Feb-2016 13:40:55 America/Chicago] PHP Fatal error:  Cannot redeclare headerAndSearchCode() (previously declared in /home2/booksnga/public_html/includes/html_codes.php:4) in /home2/booksnga/public_html/includes/html_codes.php on line 27
+[01-Feb-2016 13:43:26 America/Chicago] PHP Fatal error:  Cannot redeclare headerAndSearchCode() (previously declared in /home2/booksnga/public_html/includes/html_codes.php:4) in /home2/booksnga/public_html/includes/html_codes.php on line 27
+[01-Feb-2016 13:49:21 America/Chicago] PHP Fatal error:  Cannot redeclare headerAndSearchCode() (previously declared in /home2/booksnga/public_html/includes/html_codes.php:4) in /home2/booksnga/public_html/includes/html_codes.php on line 27
+[01-Feb-2016 13:51:08 America/Chicago] PHP Fatal error:  Cannot redeclare headerAndSearchCode() (previously declared in /home2/booksnga/public_html/includes/html_codes.php:4) in /home2/booksnga/public_html/includes/html_codes.php on line 27
+[01-Feb-2016 13:51:09 America/Chicago] PHP Fatal error:  Cannot redeclare headerAndSearchCode() (previously declared in /home2/booksnga/public_html/includes/html_codes.php:4) in /home2/booksnga/public_html/includes/html_codes.php on line 27
+[01-Feb-2016 13:51:16 America/Chicago] PHP Fatal error:  Cannot redeclare headerAndSearchCode() (previously declared in /home2/booksnga/public_html/includes/html_codes.php:4) in /home2/booksnga/public_html/includes/html_codes.php on line 27
